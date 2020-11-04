@@ -11,7 +11,7 @@ function App() {
   async function setupVideo(useDevice) {
     console.log('Setting up with ', currentDevice)
     listMediaDevices()
-    const maxWidth = window.innerWidth;
+    const maxWidth = window.innerWidth - 18; // subtract scrollbar
     const maxHeight = window.innerHeight;
     const deviceId = useDevice ? { exact: useDevice } : null
 
