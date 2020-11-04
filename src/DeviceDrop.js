@@ -8,7 +8,6 @@ class DeviceDrop extends React.Component {
       <option key={device.deviceId} value={device.deviceId}>{device.label}</option>
     );
 
-    console.log("I'm told to select", this.props.select)
     return (
       <div>
         <select onChange={(event) => this.props.onChange(event.target.value)} value={this.props.select}>

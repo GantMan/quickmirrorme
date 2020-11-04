@@ -6,7 +6,7 @@ function App() {
   const mirror = useRef(null)
   const [stream, setStream] = useState()
   const [devices, setDevices] = useState()
-  const [currentDevice, setCurrentDevice] = useState()
+  const [currentDevice, setCurrentDevice] = useState(localStorage.getItem("currentDevice"))
 
   async function setupVideo(useDevice) {
     console.log('Setting up with ', currentDevice)
@@ -40,6 +40,7 @@ function App() {
       }
 
     } catch (e) {
+      localStorage.clear()
       alert("Something went wrong for this device!  Please change browsers, try again, or contribute to the site's open source!")
       console.log(e)
     }
@@ -59,12 +60,14 @@ function App() {
 
   async function changeDevice(dd) {
     setCurrentDevice(dd)
+    // store for next time
+    localStorage.setItem('currentDevice', dd);
     killVideo()
     setupVideo(dd)
   }
 
   useEffect(() => {
-    setupVideo()
+    setupVideo(currentDevice)
     // cleanup is returned
     return killVideo
   }, [])
