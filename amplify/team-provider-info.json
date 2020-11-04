@@ -10,6 +10,14 @@
             "StackName": "amplify-quickmirror-prod-161711",
             "StackId": "arn:aws:cloudformation:us-east-1:119079881983:stack/amplify-quickmirror-prod-161711/f3af3f50-1962-11eb-b09b-121b2f990f49",
             "AmplifyAppId": "d11vop93dy23y"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d11vop93dy23y",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
