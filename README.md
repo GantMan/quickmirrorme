@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# [QuickMirror.me](https://quickmirror.me/)
+## Check yoself before you tech yoself
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Promo Image](./public/twittercard.jpg)
+
 
 ## Available Scripts
 
