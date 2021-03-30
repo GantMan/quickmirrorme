@@ -7,6 +7,7 @@ function App() {
   const [stream, setStream] = useState()
   const [devices, setDevices] = useState()
   const [currentDevice, setCurrentDevice] = useState(localStorage.getItem("currentDevice"))
+  const [mirrored, setMirrored] = useState(true)
 
   async function setupVideo(useDevice) {
     console.log('Setting up with ', currentDevice)
@@ -75,13 +76,13 @@ function App() {
   return (
     <div className="App">
       <main>
-        <video ref={mirror} id="mirror" autoPlay />
+        <video ref={mirror} id="mirror" className={mirrored ? "mirrored" : ""} autoPlay />
       </main>
       <div className="App-footer">
         <p>
           By <a href="https://gantlaborde.com">Gant</a> &amp; <a href="https://infinite.red/">Infinite Red</a>
         </p>
-
+        <button onClick={() => setMirrored(m => !m)}>{mirrored ? "Mirrored" : "Unmirrored"}</button>
         <DeviceDrop select={currentDevice} devices={devices} onChange={changeDevice} />
       </div>
     </div>
