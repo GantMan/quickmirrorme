@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>QuickMirror – Free Online Mirror &amp; Webcam Check</title>
+    <meta
+      name="description"
+      content="A free online mirror that uses your webcam. Check how you look before a Zoom, Google Meet, or Teams call in one click. No sign-up, no recording, works on phone and desktop."
+    />
+    <link rel="canonical" href="https://quickmirror.me/" />
+    <meta name="author" content="Gant Laborde" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#121214" />
+    <meta name="color-scheme" content="dark" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="QuickMirror" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Slack, Discord, iMessage…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="QuickMirror" />
+    <meta property="og:url" content="https://quickmirror.me/" />
+    <meta property="og:title" content="QuickMirror – Check how you look before your next call" />
+    <meta
+      property="og:description"
+      content="A free online mirror that uses your webcam. One click, no sign-up, nothing recorded. Don't join your next meeting looking like trash."
+    />
+    <meta property="og:image" content="https://quickmirror.me/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="QuickMirror.me: cartoon people checking their appearance in front of a monitor" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GantLaborde" />
+    <meta name="twitter:creator" content="@GantLaborde" />
+    <meta name="twitter:title" content="QuickMirror – Check how you look before your next call" />
+    <meta
+      name="twitter:description"
+      content="A free online mirror that uses your webcam. One click, no sign-up, nothing recorded."
+    />
+    <meta name="twitter:image" content="https://quickmirror.me/og-image.jpg" />
+    <meta name="twitter:image:alt" content="QuickMirror.me: cartoon people checking their appearance in front of a monitor" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://quickmirror.me/#website",
+            "url": "https://quickmirror.me/",
+            "name": "QuickMirror",
+            "alternateName": "QuickMirror.me",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://quickmirror.me/#app",
+            "name": "QuickMirror",
+            "url": "https://quickmirror.me/",
+            "description": "A free online mirror that uses your webcam so you can check how you look before a video call. Runs entirely in your browser; video never leaves your device.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any (web browser)",
+            "browserRequirements": "Requires a browser with camera access (Chrome, Safari, Firefox, Edge)",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "image": "https://quickmirror.me/og-image.jpg",
+            "screenshot": "https://quickmirror.me/og-image.jpg",
+            "featureList": [
+              "Instant webcam mirror with one click",
+              "Mirrored or unmirrored (how others see you) view",
+              "Switch between multiple cameras",
+              "Fullscreen mode",
+              "Works on phones, tablets, and computers",
+              "No sign-up, no install, nothing recorded or uploaded"
+            ],
+            "author": {
+              "@type": "Person",
+              "name": "Gant Laborde",
+              "url": "https://gantlaborde.com",
+              "sameAs": ["https://github.com/GantMan", "https://x.com/GantLaborde"]
+            },
+            "publisher": { "@type": "Organization", "name": "Infinite Red", "url": "https://infinite.red/" },
+            "sameAs": ["https://github.com/GantMan/quickmirrorme"]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://quickmirror.me/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is QuickMirror free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. QuickMirror is free, has no ads, and needs no account. It is open source on GitHub." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does QuickMirror record or upload my video?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. The video goes straight from your camera to your screen inside your browser. Nothing is recorded, stored, or sent to a server." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it work on my phone?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. QuickMirror works in mobile Safari and Chrome on iPhone, iPad, and Android, and opens the front-facing selfie camera by default." }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does my image look flipped?",
+                "acceptedAnswer": { "@type": "Answer", "text": "QuickMirror starts mirrored, like a real mirror. Tap Mirrored to switch to Unmirrored and see yourself the way other people on a call see you." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I use a different webcam?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pick it from the camera menu at the bottom of the mirror. QuickMirror remembers your choice for next time." }
+              },
+              {
+                "@type": "Question",
+                "name": "Why isn't my camera working?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Make sure you allowed camera access for quickmirror.me (look for the camera icon in the address bar) and that no other app, like Zoom or Teams, is using the camera. Then press Try again." }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <main id="about" class="about">
+      <h1>QuickMirror<span>.me</span>: a free online mirror for your webcam</h1>
+      <p class="lead">
+        Check yourself before you tech yourself. QuickMirror turns your webcam into a mirror so you can see how you look
+        before a Zoom, Google Meet, Microsoft Teams, Slack, or FaceTime call. One click, no sign-up, and nothing is ever
+        recorded.
+      </p>
+      <a class="cta" href="#root">Open the mirror ↑</a>
+
+      <h2>How it works</h2>
+      <ol>
+        <li>Open <a href="https://quickmirror.me/">quickmirror.me</a> on your phone or computer.</li>
+        <li>Allow camera access when your browser asks.</li>
+        <li>Fix your hair, lighting, and background, then join your call with confidence.</li>
+      </ol>
+
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Instant mirror:</strong> your camera starts as soon as the page loads.</li>
+        <li><strong>Mirrored or unmirrored:</strong> flip the view to see exactly what others on the call will see.</li>
+        <li><strong>Any camera:</strong> switch between built-in, USB, and phone cameras; your choice is remembered.</li>
+        <li><strong>Fullscreen:</strong> fill the whole screen for a quick lighting and framing check.</li>
+        <li><strong>Works everywhere:</strong> Chrome, Safari, Firefox, and Edge on desktop, iPhone, iPad, and Android.</li>
+      </ul>
+
+      <h2>Private by design</h2>
+      <p>
+        QuickMirror runs entirely in your browser. Your video goes from your camera to your screen and nowhere else: no
+        servers, no recording, no tracking, no ads. Don't take our word for it; the code is
+        <a href="https://github.com/GantMan/quickmirrorme">open source on GitHub</a>.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>Is QuickMirror free?</summary>
+        <p>Yes. QuickMirror is free, has no ads, and needs no account. It is open source on GitHub.</p>
+      </details>
+      <details>
+        <summary>Does QuickMirror record or upload my video?</summary>
+        <p>
+          No. The video goes straight from your camera to your screen inside your browser. Nothing is recorded, stored, or
+          sent to a server.
+        </p>
+      </details>
+      <details>
+        <summary>Does it work on my phone?</summary>
+        <p>
+          Yes. QuickMirror works in mobile Safari and Chrome on iPhone, iPad, and Android, and opens the front-facing
+          selfie camera by default.
+        </p>
+      </details>
+      <details>
+        <summary>Why does my image look flipped?</summary>
+        <p>
+          QuickMirror starts mirrored, like a real mirror. Tap <em>Mirrored</em> to switch to <em>Unmirrored</em> and see
+          yourself the way other people on a call see you.
+        </p>
+      </details>
+      <details>
+        <summary>How do I use a different webcam?</summary>
+        <p>Pick it from the camera menu at the bottom of the mirror. QuickMirror remembers your choice for next time.</p>
+      </details>
+      <details>
+        <summary>Why isn't my camera working?</summary>
+        <p>
+          Make sure you allowed camera access for quickmirror.me (look for the camera icon in the address bar) and that no
+          other app, like Zoom or Teams, is using the camera. Then press <em>Try again</em>.
+        </p>
+      </details>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Made by <a href="https://gantlaborde.com">Gant Laborde</a> &amp; <a href="https://infinite.red/">Infinite Red</a>
+        · <a href="https://github.com/GantMan/quickmirrorme">Source on GitHub</a> · MIT licensed
+      </p>
+    </footer>
+
+    <noscript>
+      <p style="text-align: center">QuickMirror needs JavaScript turned on to use your camera.</p>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
