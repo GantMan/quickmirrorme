@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
+# QuickMirror welcomes search engines and AI assistants.
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://quickmirror.me/sitemap.xml

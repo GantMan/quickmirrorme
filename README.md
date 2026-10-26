@@ -1,72 +1,53 @@
 # [QuickMirror.me](https://quickmirror.me/)
-## Check yoself before you tech yoself
 
-![Promo Image](./public/blog.jpg)
+### Check yoself before you tech yoself
 
+**A free online mirror that uses your webcam.** Open [quickmirror.me](https://quickmirror.me/) and instantly see how you look before your next Zoom, Google Meet, Teams, Slack, or FaceTime call. No sign-up, no install, and nothing is ever recorded.
 
-## Available Scripts
+[![QuickMirror.me: check how you look before your next call](./public/og-image.jpg)](https://quickmirror.me/)
 
-In the project directory, you can run:
+## Features
 
-### `yarn start`
+- **One click:** the camera starts as soon as the page loads.
+- **Mirrored or unmirrored:** flip the view to see exactly what everyone else on the call sees.
+- **Any camera:** switch between built-in, USB, and external webcams. Your choice is remembered.
+- **Fullscreen:** fill the screen for a quick lighting and framing check.
+- **Phone friendly:** works in Safari and Chrome on iPhone, iPad, and Android, using the selfie camera.
+- **Private:** everything runs in your browser. No servers, no recording, no tracking, no ads.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Development
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You'll need [Node.js](https://nodejs.org/) 20.19 or newer.
 
-### `yarn test`
+```bash
+npm install
+npm run dev      # start a dev server at http://localhost:5173
+npm test         # run the tests
+npm run build    # production build in ./build
+npm run preview  # serve the production build locally
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Camera access only works on `https://` or `localhost`, so open the dev server via `localhost` (not your LAN IP) when testing in a browser.
 
-### `yarn build`
+### How it works
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+QuickMirror is a tiny [React](https://react.dev/) app built with [Vite](https://vite.dev/). It asks the browser for a camera stream with [`getUserMedia`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getUserMedia) and plays it in a `<video>` element, flipped with CSS when mirrored. That's it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| File | What it does |
+| --- | --- |
+| [`src/App.jsx`](src/App.jsx) | Starts the camera, handles errors, and renders the controls |
+| [`src/DeviceDrop.jsx`](src/DeviceDrop.jsx) | The camera picker |
+| [`index.html`](index.html) | SEO metadata, structured data, and the About/FAQ content (readable without JavaScript) |
+| [`public/`](public) | Icons, social image, `robots.txt`, `sitemap.xml`, `llms.txt`, and the web app manifest |
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The site is hosted on [AWS Amplify Hosting](https://aws.amazon.com/amplify/hosting/), which builds and deploys every push to `main` using [`amplify.yml`](amplify.yml).
 
-### `yarn build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bug reports and pull requests are welcome. Please [open an issue](https://github.com/GantMan/quickmirrorme/issues) if something doesn't work with your browser or camera.
+
+## License
+
+[MIT](LICENSE) © [Gant Laborde](https://gantlaborde.com) & [Infinite Red](https://infinite.red/)
