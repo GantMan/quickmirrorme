@@ -6,6 +6,8 @@
 
 [![QuickMirror.me: check how you look before your next call](./public/og-image.jpg)](https://quickmirror.me/)
 
+Read the story behind it: [Live-coding, Creating, Living](https://dev.to/aws-builders/live-coding-creating-living-26a7) on DEV.
+
 ## Features
 
 - **One click:** the camera starts as soon as the page loads.

@@ -168,6 +168,10 @@ export default function App() {
         </div>
       )}
 
+      <a className="maker" href="https://gantlaborde.com" title="Made by Gant Laborde">
+        <img src="/gant.webp" width="111" height="144" alt="Gant Laborde" />
+      </a>
+
       <div className="controls">
         <button type="button" aria-pressed={mirrored} onClick={toggleMirror}>
           {mirrored ? 'Mirrored' : 'Unmirrored'}

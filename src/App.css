@@ -173,8 +173,33 @@ select option {
   }
 }
 
-.stage:fullscreen .about-link {
+.stage:fullscreen .about-link,
+.stage:fullscreen .maker {
   display: none;
+}
+
+.maker {
+  position: absolute;
+  left: max(0.75rem, env(safe-area-inset-left));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  line-height: 0;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.maker img {
+  width: auto;
+  height: 72px;
+}
+
+/* On phones the controls span the bottom, so sit the logo just above them */
+@media (max-width: 760px) {
+  .maker {
+    bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 64px);
+  }
+
+  .maker img {
+    height: 52px;
+  }
 }
 
 /* About content (static HTML in index.html, readable without JavaScript) */
